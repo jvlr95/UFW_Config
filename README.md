@@ -1,7 +1,7 @@
 ## ShellScript
 
 Este repositório contém uma coleção de scripts que foram desenvolvidos para auxiliar e automatizar processos de trabalho específicos. Os scripts foram criados para simplificar tarefas rotineiras, economizar tempo e melhorar a eficiência. Sinta-se à vontade para explorar e usar esses scripts de acordo com suas necessidades.
-
+Scripts em desenvolvimento.
 ## Conteudo
 
 1 > config-ufw.sh - Configuração basica de fiwareall usando Uncomplicate firewall - UFW
