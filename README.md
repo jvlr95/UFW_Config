@@ -1,29 +1,38 @@
-## ShellScript
+```markdown
+# Scripts pessoais -- ShellScript
 
-Este repositório contém uma coleção de scripts que foram desenvolvidos para auxiliar e automatizar processos de trabalho específicos. Os scripts foram criados para simplificar tarefas rotineiras, economizar tempo e melhorar a eficiência. Sinta-se à vontade para explorar e usar esses scripts de acordo com suas necessidades.
-Scripts em desenvolvimento.
+Este repositório contém uma coleção de scripts desenvolvidos para auxiliar e automatizar processos específicos. Os scripts foram criados com o objetivo de simplificar tarefas rotineiras, economizar tempo e melhorar a eficiência. Sinta-se à vontade para explorar e utilizar esses scripts conforme suas necessidades. Scripts em desenvolvimento.
 
-## Conteudo
- 
-1 > config-ufw.sh - Configuração basica de fiwareall usando Uncomplicate firewall - UFW
+## Conteúdo
 
-2 > automatizacao.sh - Automatização de processos diarios no meu serviço como analista de suporte TI, acessos Secure Shell (SSH), copias de arquivos através do protocolo Secure Copy Protocol (SCP), uso da ferramenta nmap. 
+### 1. `current_config_ufw.sh`
+   - Script 1.0config_ufw.sh - Configuração básica de firewall usando o Uncomplicated Firewall (UFW).
+   - Script current_configu_ufw.sh - Configuração intermediaria para uso de firewall em ambientes kubernetes com foco em testes locais.
 
-3 > xrandr.sh - Automatização para configuração do display, para quem optou usar gerenciadores de janela
+### 2. `automatizacao.sh`
+   - Automação de processos diários como analista de suporte de TI, incluindo acessos SSH, cópias de arquivos usando SCP e utilização da ferramenta nmap.
+
+### 3. `xrandr.sh`
+   - Automação para configuração do display, útil para quem utiliza gerenciadores de janelas.
 
 ## Requisitos
 
-1 > Para usar esse script o usuario precisa instalar o pacote do Uncomplicate firewall (UFW) através do gerenciador de pacotes da distribuição.
-    > fedora : sudo dnf install ufw -y
-    > debian e derivados : sudo apt install ufw -y
-    > opensuse : sudo zypper install ufw
-    > arch linux e derivados : yay -s ufw
+1. **`config-ufw.sh`:**
+   - Para usar este script, o usuário precisa instalar o Uncomplicated Firewall (UFW) através do gerenciador de pacotes da distribuição.
+     - Fedora: `sudo dnf install ufw -y`
+     - Debian e derivados: `sudo apt install ufw -y`
+     - openSUSE: `sudo zypper install ufw`
+     - Arch Linux e derivados: `yay -s ufw`
 
-2 > Para usar esse script o usuario precisa se atentar aos diretorios locais para corrigir todos locais de acesso ou salvamento de arquivos pelo SCP.
+2. **`automatizacao.sh`:**
+   - O usuário deve ajustar os diretórios locais para corrigir qualquer problema de acesso ou salvamento de arquivos via SCP.
 
-3 > Para usar esse script o usuario precisa instalar o utilitario xrandr na distribuição
-    > fedora : sudo dnf install xrandr 
-    > debian e derivados : sudo apt install xrandr
-    > opensuse : sudo zypper install xrandr
-    > arch linux e derivadors : sudo pacman -Syu xrandr
+3. **`xrandr.sh`:**
+   - Para usar este script, o usuário precisa instalar o utilitário xrandr em sua distribuição.
+     - Fedora: `sudo dnf install xrandr`
+     - Debian e derivados: `sudo apt install xrandr`
+     - openSUSE: `sudo zypper install xrandr`
+     - Arch Linux e derivados: `sudo pacman -Syu xrandr`
 
+**Observação:** Antes de executar os scripts, verifique se atende aos requisitos e revise o código cuidadosamente para evitar problemas. Utilize com responsabilidade.
+```
