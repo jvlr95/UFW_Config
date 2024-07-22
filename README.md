@@ -1,10 +1,5 @@
 # Configuração UFW -- Shellscript
 
-***`current_config_ufw.sh`***
-   - Script `1.0config_ufw.sh`: Configuração básica de firewall usando o Uncomplicated Firewall (UFW).
-   - Script `current_configu_ufw.sh`: Configuração intermediária para uso de firewall em ambientes Kubernetes com foco em testes locais.
-   - 
-
 ## Requisitos
 
 1. **`config-ufw.sh`:**
