@@ -1,5 +1,17 @@
 #!/usr/bin/env bash
 # Script desenvolvido por João Rodrigues - Contato: jvitor.lr@hotmail.com
+# Licença: MIT
+# 
+# Permissão é concedida, gratuitamente, a qualquer pessoa que obtenha uma cópia deste software e arquivos de documentação associados
+# (o "Software"), para lidar no Software sem restrição, incluindo, sem limitação, os direitos de usar, copiar, modificar, mesclar,
+# publicar, distribuir, sublicenciar e/ou vender cópias do Software, sujeita às seguintes condições:
+# 
+# A licença acima deve ser incluída em todas as cópias ou partes substanciais do Software.
+# 
+# O SOFTWARE É FORNECIDO "NO ESTADO EM QUE SE ENCONTRA", SEM GARANTIAS DE QUALQUER TIPO, EXPRESSAS OU IMPLÍCITAS, INCLUINDO, MAS NÃO SE LIMITANDO ÀS GARANTIAS DE
+# COMERCIALIZAÇÃO, ADEQUAÇÃO A UM FIM ESPECÍFICO E NÃO VIOLAÇÃO. EM NENHUM CASO OS AUTORES OU TITULARES DOS DIREITOS AUTORAIS SERÃO RESPONSÁVEIS POR QUALQUER RECLAMAÇÃO,
+# DANO OU OUTRA RESPONSABILIDADE, SEJA EM AÇÃO DE CONTRATO, AGRAVO OU OUTRA AÇÃO, DECORRENTE DE OU EM CONEXÃO COM O SOFTWARE OU O USO OU OUTRAS NEGOCIAÇÕES NO SOFTWARE.
+
 # Programa desenvolvido para automatizar configuração do firewall - Uncomplicated Firewall - ufw
 # Este script permite configurar o firewall para serviços básicos de um usuário, liberação de acessos SSH, FTP,
 # liberação de navegação de internet, acessos remotos através do Teamviewer, Anydesk e para serviços avançados em ambientes Kubernetes usando Kubeadm
@@ -52,6 +64,11 @@ ufw allow 30000:32767/tcp
 echo -e "${orange}\nPermitindo o acesso ao etcd nas portas 2379-2380...${close}"
 ufw allow 2379:2380/tcp
 
+# Permitir acesso TCP e UDP nas portas 1714-1764 - KDEConnet
+echo -e "${orange}\nPermitindo o acesso TCP e UDP nas portas 1714-1764...${close}"
+ufw allow 1714:1764/tcp
+ufw allow 1714:1764/udp
+
 # Habilitar o Uncomplicated Firewall (UFW) com todas as regras configuradas
 echo -e "${orange}\nHabilitando o Uncomplicated Firewall (UFW) com todas as regras configuradas...${close}"
 ufw --force enable
@@ -59,3 +76,4 @@ ufw --force enable
 # Exibir o status do UFW após a configuração
 echo -e "${red}\nStatus do UFW após a configuração:${close}"
 ufw status verbose
+
